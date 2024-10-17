@@ -17,6 +17,9 @@ public class App {
                 case 2:
                     Fibonacci.display();
                     break;
+                case 3:
+                    TwoProducts.display();
+                    break;
                 case 5:
                     System.out.println("Exiting...");
                     break;
@@ -49,4 +52,17 @@ public class App {
 
         return fibonacci(n - 1) + fibonacci(n - 2);
     }
+
+    public static int twoProducts(int v1, int v2) {
+        if (v2 == 0) {
+            return 0;
+        }
+
+        if (v2 == 1) {
+            return v1;
+        }
+
+        return v1 + twoProducts(v1, v2 - 1);
+    }
+
 }
