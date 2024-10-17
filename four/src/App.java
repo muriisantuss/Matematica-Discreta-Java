@@ -20,6 +20,9 @@ public class App {
                 case 3:
                     TwoProducts.display();
                     break;
+                case 4:
+                    Sum.display();
+                    break;
                 case 5:
                     System.out.println("Exiting...");
                     break;
@@ -30,6 +33,8 @@ public class App {
         } while (choice != 5);
 
         scanner.close();
+
+
     }
 
     public static int factorial(int number) {
@@ -63,6 +68,14 @@ public class App {
         }
 
         return v1 + twoProducts(v1, v2 - 1);
+    }
+
+    public static int sum(int v1, int v2) {
+        if (v2 == 0) {
+            return v1;
+        }
+
+        return  sum(v1+1, v2-1);
     }
 
 }
