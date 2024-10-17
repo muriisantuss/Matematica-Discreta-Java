@@ -14,6 +14,9 @@ public class App {
                 case 1:
                     Factorial.display();
                     break;
+                case 2:
+                    Fibonacci.display();
+                    break;
                 case 5:
                     System.out.println("Exiting...");
                     break;
@@ -22,6 +25,7 @@ public class App {
                     break;
             }
         } while (choice != 5);
+
         scanner.close();
     }
 
@@ -33,5 +37,16 @@ public class App {
 
         System.out.print(number + " * ");
         return number * factorial(number - 1);
+    }
+
+    public static int fibonacci(int n) {
+        if (n == 0) {
+            return 0;
+        }
+        if (n == 1) {
+            return 1;
+        }
+
+        return fibonacci(n - 1) + fibonacci(n - 2);
     }
 }
